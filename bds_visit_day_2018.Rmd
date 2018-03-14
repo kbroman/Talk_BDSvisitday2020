@@ -1,0 +1,45 @@
+---
+title: "UW-Madison Biomedical Data Science PhD"
+author: "[Karl Broman](http://kbroman.org)"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      slideNumberFormat: '%current%'
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+# Why UW-Madison?
+
+- Science
+- People
+- Madison
+
+---
+
+# Why _biomedical data science_?
+
+- biostatistics + biomedical informatics
+- growth in scale and complexity of biomedical data
+
+---
+
+# About the BDS PhD program
+
+- flexible coursework
+- but both statistics and computer science
+- no written exam
+- 3 semester-long rotations
+- literature course; professional skills course
+
+---
+
+# Example coursework
+
+(include figure here; maybe two)
