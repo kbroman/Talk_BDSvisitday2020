@@ -27,10 +27,22 @@ knitr::opts_chunk$set(message=FALSE, warning=FALSE,
 
 ---
 
+# Goal
+
+Skills and training to
+
+- Gain understanding of some area of biomedical research
+- Develop statistical/computational methods <br/>
+  to answer relevant scientific questions
+- Implement those methods in software
+
+
+---
+
 # Why _biomedical data science_&nbsp;?
 
-- biostatistics + biomedical informatics
 - growth in scale and complexity of biomedical data
+- biostatistics + biomedical informatics
 
 ---
 
