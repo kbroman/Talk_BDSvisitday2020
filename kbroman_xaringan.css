@@ -25,3 +25,8 @@ ul li {
     font-size: 24px;
     margin: 0 0 15px 0;
 }
+
+/* remove slide number from title slide */
+.title-slide .remark-slide-number {
+    display: none;
+}
