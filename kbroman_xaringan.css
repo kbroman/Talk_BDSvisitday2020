@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz);
 @import url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
 
-body { font-family: sans-serif; }
+body {
+    font-family: sans-serif;
+}
 
 h1, h2, h3 {
   font-family: 'Yanone Kaffeesatz';
@@ -14,8 +16,12 @@ a, a > code {
     text-decoration: none;
 }
 
+p {
+    font-size: 24px;
+}
+
 /* make lists larger and have more space between items */
 ul li {
-    font-size: 30px;
+    font-size: 24px;
     margin: 0 0 15px 0;
 }
