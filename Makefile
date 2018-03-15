@@ -1,2 +1,2 @@
-index.html: index.Rmd course_sequences.csv
+slides.html: slides.Rmd course_sequences.csv
 	R -e "rmarkdown::render('$<')"
