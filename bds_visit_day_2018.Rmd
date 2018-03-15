@@ -13,6 +13,10 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(message=FALSE, warning=FALSE,
+                      echo=FALSE, include=FALSE,
+                      fig.width=11.5, fig.height=6.5,
+                      dev="svg", dev.args=list(pointsize=18))
 ```
 
 # Why UW-Madison?
@@ -34,12 +38,101 @@ options(htmltools.dir.version = FALSE)
 
 - flexible coursework
 - but both statistics and computer science
-- no written exam
+- at least 2 biology courses
 - 3 semester-long rotations
 - literature course; professional skills course
+- no written exam
+- oral exam in 3rd year
+- PhD thesis and oral defense
 
 ---
 
-# Example coursework
+# Coursework: statistical genomics
 
-(include figure here; maybe two)
+```{r load_data}
+courses <- read.csv("course_sequences.csv", stringsAsFactors=FALSE)
+courses <- split(courses, courses$student)
+```
+
+```{r functions}
+library(broman)
+plot_semester <-
+    function(data, x=0, y=0, width=100, heightper=100/13,
+             color=broman::brocolors("crayons")[c("Magic Mint", "Blue Bell", "Melon",
+             "Wild Watermelon", "Timberwolf", "Maize", "Wisteria")],
+             add=FALSE)
+{
+
+    if(!add)
+        plot(0,0,type="n", xlab="", ylab="", xaxt="n", yaxt="n",
+             xlim=c(0,100), ylim=c(100, 0))
+
+    text <- data$course
+    color <- color[match(data$type, c("bio", "core", "elec", "eth", "prereq", "rot", "lit"))]
+
+    ht <- heightper*data$credits
+    y <- y + cumsum(c(0,ht[-length(ht)]))
+
+    x <- rep(x, length(y))
+    for(i in seq(along=y)) {
+        rect(x, y[i], x+width, y[i]+ht[i], col=color[i], border="black")
+        text(x+width/2, y[i]+ht[i]/2, text[i], cex=0.8)
+    }
+}
+
+plot_student <-
+    function(data, width=100, heightper=100/13, gapx = 10, gapy=heightper*2, legendw=20,
+             color=broman::brocolors("crayons")[c("Magic Mint", "Blue Bell", "Melon",
+             "Wild Watermelon", "Timberwolf", "Maize", "Wisteria")])
+{
+    # max per semester by year
+    cr <- tapply(data$credits, data$semester, sum)
+    cr <- matrix(cr, ncol=2, byrow=TRUE)
+    cr <- apply(cr, 1, max)
+
+    # start locations
+    x <- c(0, width+gapx)
+    y <- c(0, gapy+heightper*cr[1])
+    y <- c(y, y[2]+gapy+heightper*cr[2])
+    totalw <- max(x)+width+gapx*1.5+legendw
+    totalh <- max(y)+heightper*cr[3]
+
+    par(bty="n", mar=rep(0.1, 4))
+    plot(0,0,type="n", xlab="", ylab="", xaxt="n", yaxt="n",
+         xlim=c(-15,totalw+5), ylim=c(totalh+5, -15), xaxs="i", yaxs="i")
+    px <- c(1,2,1,2,1,2)
+    py <- c(1,1,2,2,3,3)
+    for(i in 1:6) {
+        plot_semester(data[data$semester==i,], x[px[i]], y[py[i]],
+                      width, heightper, color, TRUE)
+    }
+
+    o <- c(5,2,6,3,1,7,4)
+    legend(totalw-legendw-gapx, y[1], pch=22, pt.bg=color[o], col="black", pt.cex=3,
+           c("Biology", "Core", "Elective", "Ethics", "Prereq", "Rotation", "Seminar")[o])
+
+    text(x+width/2, rep(-7.5,2), c("Fall", "Spring"))
+    text(rep(-7.5,3), y + cr*heightper/2, paste("Year", 1:3), srt=90)
+
+}
+```
+
+```{r plot_genomics_student, include=TRUE}
+plot_student(courses[[1]])
+```
+
+---
+
+# Coursework: bioinformatics
+
+```{r plot_bioinformatics_student, include=TRUE}
+plot_student(courses[[2]])
+```
+
+---
+
+# Coursework: clinical biostat/informatics
+
+```{r plot_clin_biostat_student, include=TRUE}
+plot_student(courses[[3]])
+```
