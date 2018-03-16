@@ -1,5 +1,7 @@
 ---
 title: "UW-Madison [Biomedical Data Science](https://bit.ly/MadBDS) PhD"
+author: "[Karl Broman](http://kbroman.org)"
+date: "[`kbroman.org`](http://kbroman.org) <br/> [`github.com/kbroman`](https://github.com/kbroman) <br/> [`@kwbroman`](https://twitter.com/kwbroman) <br/> `kbroman@biostat.wisc.edu`"
 output:
   xaringan::moon_reader:
     lib_dir: libs

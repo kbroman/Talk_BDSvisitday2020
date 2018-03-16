@@ -30,3 +30,24 @@ ul li {
 .title-slide .remark-slide-number {
     display: none;
 }
+
+/* more space below title on title slide */
+.title-slide h1 {
+    margin-bottom: 120px;
+}
+
+/* make author larger on title slide */
+.title-slide h3 a {
+    font-size: 48px;
+    color: rgb(100,100,100);
+}
+
+/* make personal URLs on title slide smaller and white */
+.title-slide h3 > a code, h3 > code {
+    font-size: 20px;
+}
+
+/* white font for personal urls on title slide */
+.title-slide a code {
+    color: rgb(255, 255, 255);
+}
