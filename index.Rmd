@@ -1,7 +1,7 @@
 ---
-title: "UW-Madison [Biomedical Data Science](https://bit.ly/MadBDS) PhD"
+title: "UW-Madison [Biomedical Data Science](https://bit.ly/MadBDS)"
 author: "[Karl Broman](http://kbroman.org)"
-date: "[`kbroman.org`](http://kbroman.org) <br/> [`github.com/kbroman`](https://github.com/kbroman) <br/> [`@kwbroman`](https://twitter.com/kwbroman) <br/> `kbroman@biostat.wisc.edu`"
+date: "[`kbroman.org`](http://kbroman.org) <br/> [`github.com/kbroman`](https://github.com/kbroman) <br/> [`@kwbroman`](https://twitter.com/kwbroman) <br/> `broman@wisc.edu`"
 output:
   xaringan::moon_reader:
     lib_dir: libs
@@ -48,6 +48,21 @@ Skills and training to
 
 ---
 
+# About the BDS MS program
+
+- 4 core courses
+  - biostatistics
+  - bioinformatics
+  - medical image analysis
+  - health informatics
+- concentration electives (6 credits)
+- data science electives (6 credits)
+- research electives
+  - research ethics (1 credit)
+  - research project
+
+---
+
 # About the BDS PhD program
 
 - flexible coursework
@@ -61,7 +76,7 @@ Skills and training to
 
 ---
 
-# Coursework: statistical genomics
+# PhD coursework: statistical genomics
 
 ```{r load_data}
 courses <- read.csv("course_sequences.csv", stringsAsFactors=FALSE)
@@ -137,7 +152,7 @@ plot_student(courses[[1]])
 
 ---
 
-# Coursework: bioinformatics
+# PhD coursework: bioinformatics
 
 ```{r plot_bioinformatics_student, include=TRUE}
 plot_student(courses[[2]])
@@ -145,7 +160,7 @@ plot_student(courses[[2]])
 
 ---
 
-# Coursework: clinical biostat/informatics
+# PhD coursework: clinical biostat/informatics
 
 ```{r plot_clin_biostat_student, include=TRUE}
 plot_student(courses[[3]])
