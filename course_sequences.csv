@@ -1,8 +1,8 @@
 student,semester,course,type,credits
-1,1,CS 302 (Introduction to programming),prereq,3
+1,1,CS 200 (Programming I),prereq,3
 1,1,Stat 609 (Mathematical statistics),core,3
 1,1,Stat 849 (Theory & application of regression),core,3
-1,2,CS 367 (Data structures),prereq,3
+1,2,CS 300 (Programming II),prereq,3
 1,2,Stat 610 (Mathematical statistics),core,3
 1,2,Stat 850 (Theory & application of regression),core,3
 1,2,Rotation #1,rot,2
@@ -43,10 +43,10 @@ student,semester,course,type,credits
 2,5,Ethics and responsible conduct of research,eth,1
 2,6,CS 765 (Data visualization),elec,3
 2,6,3rd-year research skills seminar,lit,1
-3,1,CS 302 (Introduction to programming),prereq,3
+3,1,CS 200 (Programming I),prereq,3
 3,1,Stat 609 (Mathematical statistics),core,3
 3,1,Stat 849 (Theory & application of regression),core,3
-3,2,CS 367 (Data structures),prereq,3
+3,2,CS 300 (Programming II),prereq,3
 3,2,Stat 610 (Mathematical statistics),core,3
 3,2,Stat 850 (Theory & application of regression),core,3
 3,2,Rotation #1,rot,2
