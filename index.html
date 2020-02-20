@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<html lang="" xml:lang="">
   <head>
     <title>UW-Madison Biomedical Data Science</title>
     <meta charset="utf-8" />
@@ -47,27 +47,12 @@ Skills and training to
 
 ---
 
-# About the BDS MS program
-
-- 4 core courses
-  - biostatistics
-  - bioinformatics
-  - medical image analysis
-  - health informatics
-- concentration electives (6 credits)
-- data science electives (6 credits)
-- research electives
-  - research ethics (1 credit)
-  - research project
-
----
-
 # About the BDS PhD program
 
 - flexible coursework
 - but both statistics and computer science
 - at least 2 biology courses
-- 3 semester-long rotations
+- 3 semester-long research rotations (fall, spring, and summer of 1st year)
 - literature course; professional skills course
 - no written exam
 - oral exam in 3rd year
@@ -141,7 +126,24 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     }
     deleted = true;
   });
-})();</script>
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
 
 <script>
 (function() {
