@@ -48,21 +48,6 @@ Skills and training to
 
 ---
 
-# About the BDS MS program
-
-- 4 core courses
-  - biostatistics
-  - bioinformatics
-  - medical image analysis
-  - health informatics
-- concentration electives (6 credits)
-- data science electives (6 credits)
-- research electives
-  - research ethics (1 credit)
-  - research project
-
----
-
 # About the BDS PhD program
 
 - flexible coursework
